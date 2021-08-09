@@ -2,6 +2,20 @@
 
 See [examples](https://github.com/hugopl/gtk4.cr/tree/master/examples) folder and have fun.
 
+## Compile time dependencies
+
+You need the GTK libraries and their GObjectIntrospection files.
+
+- Archlinux: `pacman -S gtk4 gobject-introspection`
+- Ubuntu: `apt-get install libgtk-4-0 gobject-introspection gir1.2-gtk-4.0`
+
+Be welcome to create a PR updating this readme once you know what packages are needed by your distro to run the
+examples.
+
+## Runtime dependencies
+
+Just the GTK libraries are needed at runtime.
+
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
@@ -18,17 +32,8 @@ See [examples](https://github.com/hugopl/gtk4.cr/tree/master/examples) folder an
 
 See the [hello world tutorial](./tutorial/hello_world.md).
 
-For more info on how to use signals, properties, etc... see https://github.com/hugopl/gi-crystal.
-
-## Running examples
-
-For some examples see https://github.com/hugopl/gtk4.cr/tree/master/examples, to run them you first need to generate the
-bindings:
-
-```
-./bin/generate_bindings
-crystal run examples/hello_world.cr
-```
+For more info on how to use signals, properties, etc see the [GI-Crystal](https://github.com/hugopl/gi-crystal)
+project page, it's the binding generator used to create this binding.
 
 ## Contributing
 
