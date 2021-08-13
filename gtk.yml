@@ -1,0 +1,21 @@
+ignore:
+ - ButtonPrivate
+ - CellAreaContextPrivate
+ - CellRendererClassPrivate
+ - CellRendererPrivate
+ - CssProviderPrivate
+ - IMContextSimplePrivate
+ - IMMulticontextPrivate
+ - ListStorePrivate
+ - MountOperationPrivate
+ - PrintOperationPrivate
+ - RecentManagerPrivate
+ - TextBufferPrivate
+ - TextTagPrivate
+ - TextViewPrivate
+ - TreeModelFilterPrivate
+ - TreeModelSortPrivate
+ - TreeStorePrivate
+ - WidgetClassPrivate
+ - WidgetPrivate
+ - WindowGroupPrivate
