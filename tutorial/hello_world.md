@@ -43,7 +43,7 @@ app.activate_signal.connect do
   window.title = "Hello World!"
   window.set_default_size(200, 200)
 
-  button = Gtk::Button.new("Hello!!")
+  button = Gtk::Button.new_with_label("Hello!!")
   button.clicked_signal.connect do
     count += 1
     button.label = "You clicked #{count} times!"

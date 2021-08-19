@@ -25,8 +25,8 @@ def activate(app : Gtk::Application)
   window.title = "Gtk Builder"
   window.set_default_size(200, 200)
 
-  builder = Gtk::Builder.from_string(UI, UI.bytesize.to_i64)
-  root = Gtk::Widget.cast(builder.get_object("root"))
+  builder = Gtk::Builder.new_from_string(UI, UI.bytesize.to_i64)
+  root = Gtk::Widget.cast(builder["root"])
 
   window.child = root
   window.present

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkTreeStore" id="tree_model">
+    <columns>
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkBox" id="root">
+    <property name="can-focus">0</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkLabel" id="label">
+        <property name="can-focus">0</property>
+        <property name="label" translatable="yes">Double click on some row</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkTreeView" id="tree_view">
+        <property name="vexpand">1</property>
+        <property name="model">tree_model</property>
+        <child>
+          <object class="GtkTreeViewColumn" id="treeviewcolumn">
+            <property name="title" translatable="yes">A column</property>
+            <child>
+              <object class="GtkCellRendererText" id="renderer"/>
+              <attributes>
+                <attribute name="text">0</attribute>
+              </attributes>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

@@ -1,7 +1,5 @@
 require "../src/gtk4"
 
-app = Gtk::Application.new("hello.example.com", Gio::ApplicationFlags::None)
-
 def activate(app : Gtk::Application)
   window = Gtk::ApplicationWindow.new(app)
   window.title = "Timer"
@@ -21,5 +19,6 @@ def activate(app : Gtk::Application)
   window.present
 end
 
+app = Gtk::Application.new("hello.example.com", Gio::ApplicationFlags::None)
 app.activate_signal.connect(->activate(Gtk::Application))
 exit(app.run(ARGV))
