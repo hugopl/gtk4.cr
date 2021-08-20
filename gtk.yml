@@ -1,3 +1,7 @@
+include:
+  - src/includes/builder.cr
+  - src/includes/tree_view.cr
+
 ignore:
  - ButtonPrivate
  - CellAreaContextPrivate
