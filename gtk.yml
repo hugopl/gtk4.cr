@@ -1,5 +1,6 @@
 include:
   - src/includes/builder.cr
+  - src/includes/message_dialog.cr
   - src/includes/tree_view.cr
 
 ignore:
