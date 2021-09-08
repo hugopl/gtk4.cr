@@ -15,7 +15,7 @@ def activate(app : Gtk::Application)
     iter = model.iter(path)
 
     value = model.value(iter, 0)
-    label.text = "You Clicked on #{value}"
+    label.text = "You Clicked on #{value.as_s}"
   end
 
   window.child = Gtk::Widget.cast(builder["root"])
