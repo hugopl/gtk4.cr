@@ -25,7 +25,6 @@ end
 def fill_model(model)
   root = model.append(nil)
   model.set(root, {0}, {"Root"})
-#
   child = model.append(root)
   model.set(child, {0}, {"Child!"})
 end
@@ -33,5 +32,3 @@ end
 app = Gtk::Application.new("hello.example.com", Gio::ApplicationFlags::None)
 app.activate_signal.connect(->activate(Gtk::Application))
 exit(app.run(ARGV))
-
-

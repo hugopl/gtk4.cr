@@ -1,6 +1,6 @@
 require "../src/gtk4"
 
-UI =<<-EOT
+UI = <<-EOT
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"/>
@@ -18,7 +18,6 @@ support to glade soon</property>
   </object>
 </interface>
 EOT
-
 
 def activate(app : Gtk::Application)
   window = Gtk::ApplicationWindow.new(app)

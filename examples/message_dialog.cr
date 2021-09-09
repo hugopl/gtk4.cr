@@ -28,7 +28,7 @@ def activate(app : Gtk::Application)
           end
         end
       end
-  end
+    end
   end
 
   window.present
