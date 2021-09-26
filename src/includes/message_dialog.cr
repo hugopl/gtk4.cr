@@ -16,6 +16,7 @@ module Gtk
           transient_for: transient_for)
         dlg.response_signal.connect do |response|
           block.call(response)
+        ensure
           dlg.destroy
         end
         dlg.show
