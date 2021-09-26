@@ -1,6 +1,7 @@
 include:
   - src/includes/about_dialog.cr
   - src/includes/builder.cr
+  - src/includes/list_store.cr
   - src/includes/message_dialog.cr
   - src/includes/tree_view.cr
 
