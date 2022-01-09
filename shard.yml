@@ -7,7 +7,7 @@ authors:
 dependencies:
   gi-crystal:
     github: hugopl/gi-crystal
-    branch: master
+    version: 0.2.0
 
 scripts:
   postinstall: ../../bin/gi-crystal Gtk 4.0 -o src --config-paths=.:../gi-crystal
