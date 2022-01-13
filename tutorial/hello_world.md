@@ -27,8 +27,11 @@ crystal: 1.1.1
 license: MIT
 ```
 
-Run `shards install` to download the dependencies and generate the bindings. Be sure to have the GTK adn GObject Introspection
-packages installed beforehand.
+Run `shards install` to download the dependencies, then run `bin/gi-crystal` to generate the bindings. Be sure to have the
+GTK adn GObject Introspection packages installed beforehand.
+
+**Note**: You need to execute `bin/gi-crystal` every time some dependency that may affect the generated bindings change, like
+gi-crystal shard, newer versions of GTK4 library, etc.
 
 Now is time to write the infamous hello world, edit the sile `src/helloworld.cr`:
 

@@ -1,1 +1,2 @@
-require "./gtk-4.0/gtk"
+require "gi-crystal"
+GICrystal.require("Gtk", "4.0")

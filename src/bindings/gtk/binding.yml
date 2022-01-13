@@ -1,11 +1,13 @@
+namespace: Gtk
+version: "4.0"
 include:
-  - src/includes/about_dialog.cr
-  - src/includes/builder.cr
-  - src/includes/list_store.cr
-  - src/includes/message_dialog.cr
-  - src/includes/stack.cr
-  - src/includes/tree_store.cr
-  - src/includes/tree_view.cr
+  - about_dialog.cr
+  - builder.cr
+  - list_store.cr
+  - message_dialog.cr
+  - stack.cr
+  - tree_store.cr
+  - tree_view.cr
 
 ignore:
  - ButtonPrivate
