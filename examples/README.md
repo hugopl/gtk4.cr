@@ -11,7 +11,7 @@ cd gtk4.cr
 shards install
 
 # Generate the bindings
-./bin/generate_bindings
+./bin/gi-crystal
 
 # Run the examples
 crystal run examples/hello_world.cr
