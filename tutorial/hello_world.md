@@ -1,6 +1,6 @@
 # GTK4 Hello World from scratch
 
-First create the crystal app skeleaton by:
+First create the crystal app skeleton using:
 
 ```
 crystal init app helloworld
@@ -8,7 +8,7 @@ crystal init app helloworld
 
 This will create a helloworld directory with some files.
 
-Then add the gtk4 shard to shard.yml:
+Then add the gtk4 shard to your shard.yml:
 
 ```YAML
 name: helloworld
@@ -22,18 +22,18 @@ dependencies:
   gtk4:
     github: hugopl/gtk4.cr
 
-crystal: 1.1.1
+crystal: 1.3.1
 
 license: MIT
 ```
 
 Run `shards install` to download the dependencies, then run `bin/gi-crystal` to generate the bindings. Be sure to have the
-GTK adn GObject Introspection packages installed beforehand.
+GTK and GObject Introspection packages installed beforehand.
 
 **Note**: You need to execute `bin/gi-crystal` every time some dependency that may affect the generated bindings change, like
-gi-crystal shard, newer versions of GTK4 library, etc.
+the gi-crystal shard or newer versions of GTK4 library.
 
-Now is time to write the infamous hello world, edit the sile `src/helloworld.cr`:
+Now it's time to write the infamous hello world. Write the following to `src/helloworld.cr`:
 
 ```Crystal
 require "gtk4"
