@@ -4,7 +4,7 @@ See [examples](https://github.com/hugopl/gtk4.cr/tree/master/examples) folder an
 
 ## Is it ready?
 
-Not yet, I'm porting [Tijolo](https://github.com/hugopl/tijolo) from GTK3/[crystal-gobject](https://github.com/jhass/crystal-gobject) to GTK4 using this binding, so I should release the first version of this only when the port finishes. However bug reports about things not working still welcome, so I can keep track of them.
+You can consider it _alpha_, some functions may not compile but most of them should work just fine. If you find one please create an issue.
 
 ## Compile time dependencies
 
