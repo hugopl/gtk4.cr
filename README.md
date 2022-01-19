@@ -48,7 +48,7 @@ To generate the documentation clone this repository then do:
 
 ```
 ./bin/gi-crystal
-./bin/make_docs
+./bin/make-docs
 ```
 
 The documentation will be found at `docs/index.html`.
