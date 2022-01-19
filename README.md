@@ -40,6 +40,19 @@ See the [hello world tutorial](./tutorial/hello_world.md).
 For more info on how to use signals, properties, etc see the [GI-Crystal](https://github.com/hugopl/gi-crystal)
 project page, it's the binding generator used to create this binding.
 
+## Generating offline documentation
+
+Current documentation is far from being good, but is better (not much) than nothing.
+
+To generate the documentation clone this repository then do:
+
+```
+./bin/gi-crystal
+./bin/make_docs
+```
+
+The documentation will be found at `docs/index.html`.
+
 ## Contributing
 
 1. Fork it (<https://github.com/hugopl/gtk4.cr/fork>)

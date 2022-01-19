@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+crystal doc \
+lib/gi-crystal/src/gi-crystal.cr \
+lib/gi-crystal/src/auto/cairo-1.0/cairo.cr \
+lib/gi-crystal/src/auto/gdk-4.0/gdk.cr \
+lib/gi-crystal/src/auto/gdk_pixbuf-2.0/gdk_pixbuf.cr \
+lib/gi-crystal/src/auto/gio-2.0/gio.cr \
+lib/gi-crystal/src/auto/g_lib-2.0/g_lib.cr \
+lib/gi-crystal/src/auto/g_module-2.0/g_module.cr \
+lib/gi-crystal/src/auto/g_object-2.0/g_object.cr \
+lib/gi-crystal/src/auto/graphene-1.0/graphene.cr \
+lib/gi-crystal/src/auto/gsk-4.0/gsk.cr \
+lib/gi-crystal/src/auto/gtk-4.0/gtk.cr \
+lib/gi-crystal/src/auto/harf_buzz-0.0/harf_buzz.cr \
+lib/gi-crystal/src/auto/pango-1.0/pango.cr \
+lib/gi-crystal/src/auto/pango_cairo-1.0/pango_cairo.cr
+
