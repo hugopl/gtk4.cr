@@ -47,6 +47,7 @@ Current documentation is far from being good, but is better (not much) than noth
 To generate the documentation clone this repository then do:
 
 ```
+shards install
 ./bin/gi-crystal
 ./bin/make-docs
 ```
