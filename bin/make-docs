@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
-crystal doc \
+VERSION=$(crystal lib/version_from_shard/src/extract_version.cr  | cut -d\" -f2)
+crystal doc --project-name="GTK4.cr" --project-version="$VERSION" \
 lib/gi-crystal/src/gi-crystal.cr \
 lib/gi-crystal/src/auto/cairo-1.0/cairo.cr \
 lib/gi-crystal/src/auto/gdk-4.0/gdk.cr \

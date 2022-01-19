@@ -6,6 +6,23 @@ See [examples](https://github.com/hugopl/gtk4.cr/tree/master/examples) folder an
 
 You can consider it _alpha_, some functions may not compile but most of them should work just fine. If you find one please create an issue.
 
+## API docs
+
+Current documentation is far from being good, but is better (not much) than nothing.
+
+API docs can be found at https://hugopl.github.io/gtk4.cr/
+
+To generate the documentation clone this repository then do:
+
+```
+shards install
+./bin/gi-crystal
+./bin/make-docs
+```
+
+The documentation will be found at `docs/index.html`.
+
+
 ## Compile time dependencies
 
 You need the GTK libraries and their GObjectIntrospection files.
@@ -35,24 +52,10 @@ Just the GTK libraries are needed at runtime.
 
 ## Usage
 
-See the [hello world tutorial](./tutorial/hello_world.md).
+See the [hello world tutorial](https://github.com/hugopl/gtk4.cr/tree/master/tutorial/hello_world.md).
 
 For more info on how to use signals, properties, etc see the [GI-Crystal](https://github.com/hugopl/gi-crystal)
 project page, it's the binding generator used to create this binding.
-
-## Generating offline documentation
-
-Current documentation is far from being good, but is better (not much) than nothing.
-
-To generate the documentation clone this repository then do:
-
-```
-shards install
-./bin/gi-crystal
-./bin/make-docs
-```
-
-The documentation will be found at `docs/index.html`.
 
 ## Contributing
 
