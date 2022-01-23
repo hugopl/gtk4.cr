@@ -3,14 +3,12 @@
 VERSION=$(crystal lib/version_from_shard/src/extract_version.cr  | cut -d\" -f2)
 
 if [[ "$VERSION" == *"+"* ]]; then
-  REF="master"
+  REF_VERSION="lastest"
 else
-  REF=$VERSION
+  REF_VERSION=$VERSION
 fi
 
-echo " Gtk4.cr version: $VERSION"
-echo "Source reference: $REF"
-echo "crystal doc..."
-crystal doc -s -p --project-name="GTK4.cr" --project-version="$VERSION" --source-refname="$REF" \
+echo "Generating documentation for Gtk4.cr version $REF_VERSION..."
+crystal doc -s -p --project-name="GTK4.cr" --project-version="$REF_VERSION" \
 lib/gi-crystal/src/gi-crystal.cr \
 lib/gi-crystal/src/auto/gtk-4.0/gtk.cr
