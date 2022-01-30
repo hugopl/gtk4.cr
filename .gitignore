@@ -1,8 +1,7 @@
 /docs/
 /lib/
-/bin/gi-crystal
-/bin/ameba*
-/bin/test_example
+/bin/
+!/bin/make-docs
 /.shards/
 *.dwarf
 shard.override.yml
