@@ -1,14 +1,14 @@
 #!/usr/bin/env sh
 
-VERSION=$(crystal lib/version_from_shard/src/extract_version.cr  | cut -d\" -f2)
+VERSION=$(cat shard.yml | grep "^version" | cut -d\   -f2)
 
-if [[ "$VERSION" == *"+"* ]]; then
-  REF_VERSION="lastest"
-else
-  REF_VERSION=$VERSION
-fi
+echo "Generating documentation for Gtk4.cr version $VERSION..."
 
-echo "Generating documentation for Gtk4.cr version $REF_VERSION..."
-crystal doc -s -p --project-name="GTK4.cr" --project-version="$REF_VERSION" \
+# We do this to avoid crystal doc generate links to generated files
+echo " " >> LICENSE
+crystal doc -s -p --project-name="GTK4.cr" --project-version="$VERSION" \
 lib/gi-crystal/src/gi-crystal.cr \
 lib/gi-crystal/src/auto/gtk-4.0/gtk.cr
+
+# Put LICENSE file back
+git checkout LICENSE
