@@ -8,7 +8,7 @@ def activate(app : Gtk::Application)
   dialog.response_signal.connect do |response|
     case Gtk::ResponseType.from_value(response)
     when .cancel? then puts "Cancelled."
-    when .accept? then puts "You choose: #{dialog.file.path}"
+    when .accept? then puts "You choose: #{dialog.file.try(&.path)}"
     end
     dialog.destroy
   end
