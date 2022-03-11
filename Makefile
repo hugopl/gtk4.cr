@@ -1,4 +1,4 @@
-VERSION := $(shell cat shard.yml | grep "^version" | cut -d\   -f2)
+VERSION := $(shell shards version)
 .PHONY: doc
 
 doc: bin/gi-crystal
