@@ -15,9 +15,7 @@ API docs can be found at https://hugopl.github.io/gtk4.cr/
 To generate the documentation clone this repository then do:
 
 ```
-shards install
-./bin/gi-crystal
-./bin/make-docs
+$ make doc
 ```
 
 The documentation will be found at `docs/index.html`.
