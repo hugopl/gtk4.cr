@@ -6,6 +6,9 @@ See [examples](https://github.com/hugopl/gtk4.cr/tree/master/examples) folder an
 
 You can consider it _alpha_, some functions may not compile but most of them should work just fine. If you find one please create an issue.
 
+If you feel this repository too silent is because most of the development happens in the
+[binding generator repository](https://github.com/hugopl/gi-crystal), not here.
+
 ## API docs
 
 Current documentation is far from being good, but is better (not much) than nothing.
@@ -34,7 +37,7 @@ examples.
 
 ## Runtime dependencies
 
-Just the GTK libraries are needed at runtime.
+Just the GTK libraries are needed at runtime, i.e. not the `gobject-introspection` library and files.
 
 ## Installation
 
