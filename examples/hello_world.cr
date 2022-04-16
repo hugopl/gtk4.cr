@@ -17,4 +17,4 @@ app.activate_signal.connect do
   window.present
 end
 
-exit(app.run(ARGV))
+exit(app.run)

@@ -1,5 +1,8 @@
 namespace: Gio
 version: "2.0"
+include:
+ - application.cr
+
 ignore:
  - g_unix_fd_list_peek_fds
  - g_unix_fd_list_steal_fds

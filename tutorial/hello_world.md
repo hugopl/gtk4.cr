@@ -55,7 +55,7 @@ app.activate_signal.connect do
   window.present
 end
 
-exit(app.run(ARGV))
+exit(app.run)
 ```
 
 Now compile it normally, i.e. `shards build`, then run the program `./bin/helloworld`.

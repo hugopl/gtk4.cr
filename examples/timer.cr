@@ -21,4 +21,4 @@ end
 
 app = Gtk::Application.new("hello.example.com", Gio::ApplicationFlags::None)
 app.activate_signal.connect(->activate(Gtk::Application))
-exit(app.run(ARGV))
+exit(app.run)
