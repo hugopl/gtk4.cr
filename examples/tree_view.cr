@@ -1,10 +1,11 @@
-require "../src/gtk4"
+require "gtk4"
 
 def activate(app : Gtk::Application)
   window = Gtk::ApplicationWindow.new(app)
   window.title = "TreeView"
   window.set_default_size(200, 200)
 
+  # See widget_template.cr example for a better way to build UIs from XML files
   builder = Gtk::Builder.new_from_file("#{__DIR__}/tree_view.ui")
   model = Gtk::TreeStore.cast(builder["tree_model"])
   label = Gtk::Label.cast(builder["label"])

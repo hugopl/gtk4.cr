@@ -1,4 +1,4 @@
-require "../src/gtk4"
+require "gtk4"
 
 app = Gtk::Application.new("hello.example.com", Gio::ApplicationFlags::None)
 count = 0

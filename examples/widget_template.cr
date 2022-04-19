@@ -1,4 +1,4 @@
-require "../src/gtk4"
+require "gtk4"
 
 @[Gtk::UiTemplate(file: "#{__DIR__}/widget_template.ui")]
 class ExampleAppWindow < Gtk::ApplicationWindow

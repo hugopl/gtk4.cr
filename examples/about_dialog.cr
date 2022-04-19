@@ -1,4 +1,4 @@
-require "../src/gtk4"
+require "gtk4"
 
 def activate(app : Gtk::Application)
   Gtk.show_about_dialog(nil, name: "AboutDialog Example",

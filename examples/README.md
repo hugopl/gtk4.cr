@@ -14,7 +14,8 @@ shards install
 ./bin/gi-crystal
 
 # Run the examples
-crystal run examples/hello_world.cr
+cd examples
+crystal run hello_world.cr
 ```
 
 If you have trouble generating the binding you probably don't have the gobject introspection files installed on
