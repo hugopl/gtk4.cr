@@ -34,7 +34,11 @@ module Gtk
         {% unless @type.annotation(Gtk::UiTemplate) %}
         {% raise "You must annotate #{@type} with Gtk::UiTemplate." %}
         {% end %}
+        {% if flag?(:release) %}
         data = {{ read_file(@type.annotation(Gtk::UiTemplate)[:file]) }}
+        {% else %}
+        data = File.read({{ @type.annotation(Gtk::UiTemplate)[:file] }})
+        {% end %}
         gbytes = LibGLib.g_bytes_new_static(data, data.bytesize)
         LibGtk.gtk_widget_class_set_template(klass, gbytes)
       end
