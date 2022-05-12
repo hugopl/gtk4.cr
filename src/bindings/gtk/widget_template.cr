@@ -41,11 +41,15 @@ module Gtk
         {% end %}
         gbytes = LibGLib.g_bytes_new_static(data, data.bytesize)
         LibGtk.gtk_widget_class_set_template(klass, gbytes)
+
+        {% for child in @type.annotation(Gtk::UiTemplate)[:children] %}
+          LibGtk.gtk_widget_class_bind_template_child_full(klass, {{ child }}, 0, 0_i64)
+        {% end %}
       end
 
       def self._instance_init(instance : Pointer(LibGObject::TypeInstance), type : Pointer(LibGObject::TypeClass)) : Nil
-        previous_def
         LibGtk.gtk_widget_init_template(instance)
+        previous_def
       end
     end
   end

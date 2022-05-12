@@ -5,10 +5,10 @@
     <property name="default-width">600</property>
     <property name="default-height">400</property>
     <child>
-      <object class="GtkBox" id="content_box">
+      <object class="GtkBox">
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkStack" id="stack"/>
+          <object class="GtkLabel" id="label" />
         </child>
       </object>
     </child>

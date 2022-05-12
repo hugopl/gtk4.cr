@@ -8,6 +8,7 @@ include:
   - stack.cr
   - tree_store.cr
   - tree_view.cr
+  - widget.cr
   - widget_template.cr
 
 ignore:
