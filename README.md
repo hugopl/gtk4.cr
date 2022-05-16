@@ -2,10 +2,6 @@
 
 See [examples](https://github.com/hugopl/gtk4.cr/tree/master/examples) folder and have fun.
 
-## Is it ready?
-
-You can consider it _alpha_, some functions may not compile but most of them should work just fine. If you find one please create an issue.
-
 If you feel this repository too silent is because most of the development happens in the
 [binding generator repository](https://github.com/hugopl/gi-crystal), not here.
 
