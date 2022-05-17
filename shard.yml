@@ -7,8 +7,8 @@ authors:
 dependencies:
   gi-crystal:
     github: hugopl/gi-crystal
-    # branch: master
-    version: "~>0.11.0"
+    branch: master
+    #version: "~>0.11.0"
 
 crystal: ">= 1.4.1"
 
