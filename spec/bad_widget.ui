@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="BadWidget" parent="GtkWidget">
+    <child>
+      <object class="GtkLabel">
+      </object>
+    </child>
+  </template>
+</interface>
