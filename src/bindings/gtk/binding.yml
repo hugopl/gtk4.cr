@@ -7,6 +7,7 @@ include:
   - message_dialog.cr
   - stack.cr
   - tree_store.cr
+  - tree_selection.cr
   - tree_view.cr
   - widget.cr
   - widget_template.cr
