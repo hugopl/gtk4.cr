@@ -2,6 +2,7 @@ namespace: Gio
 version: "2.0"
 include:
  - application.cr
+ - resource.cr
 
 ignore:
  - g_unix_fd_list_peek_fds
@@ -58,6 +59,7 @@ ignore:
  - SocketListenerPrivate
  - SocketPrivate
  - SocketServicePrivate
+ - StaticResource
  - TcpConnectionPrivate
  - TcpWrapperConnectionPrivate
  - ThreadedSocketServicePrivate
