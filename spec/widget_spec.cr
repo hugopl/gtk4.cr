@@ -8,7 +8,6 @@ class BadWidget < Gtk::Widget
     super()
     template_child("typo")
   end
-
 end
 
 describe Gtk::Widget do
