@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.0] - 2022-06-04
+### Changed
+- Using GI-Crystal v0.12.x, See [GI-Crystal changelog](https://github.com/hugopl/gi-crystal/blob/master/CHANGELOG.md) for more info.
+- Call `abort` when `Gtk::Widget#template_child` can't find the widget.
+
+### Added
+- Added `Gtk::TreeSelection#select_row(Int32)` sugar, to select a row.
+
 ## [0.9.0] - 2022-05-15
 ### Changed
 - Using GI-Crystal v0.11.x, See [GI-Crystal changelog](https://github.com/hugopl/gi-crystal/blob/master/CHANGELOG.md) for more info.
