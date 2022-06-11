@@ -8,8 +8,7 @@ module Gio
     {%
       `glib-compile-resources --target crystal-gio-resource.gresource #{resource_file}`
       data = read_file("crystal-gio-resource.gresource")
-      # FIXME: This wont work on windows
-      `rm crystal-gio-resource.gresource`
+      `crystal eval 'File.delete("crystal-gio-resource.gresource")'`
     %}
     begin
       resource_data = {{ data }}
