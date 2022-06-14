@@ -16,7 +16,7 @@ module Gio
       gbytes = LibGLib.g_bytes_new_static(resource_data, resource_data.bytesize)
       error = Pointer(LibGLib::Error).null
       resource = LibGio.g_resource_new_from_data(gbytes, pointerof(error))
-      Gio.raise_exception(error) unless error.null?
+      Gio.raise_gerror(error) unless error.null?
 
       Gio::Resource.new(resource, :none).tap do |resource|
         resource._register
