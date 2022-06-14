@@ -4,9 +4,9 @@ module Gio
   # This macro runs `glib-compile-resources` at compile time, so the XML is only needed at compile time.
   #
   # See `examples/resource.cr` for more info.
-  macro register_resource(resource_file)
+  macro register_resource(resource_file, sourcedir = ".")
     {%
-      `glib-compile-resources --target crystal-gio-resource.gresource #{resource_file}`
+      `glib-compile-resources --sourcedir #{sourcedir} --target crystal-gio-resource.gresource #{resource_file}`
       data = read_file("crystal-gio-resource.gresource")
       # FIXME: This wont work on windows
       `rm crystal-gio-resource.gresource`
