@@ -1,4 +1,9 @@
 namespace: Gdk
 version: "4.0"
 include:
+  - event.cr
+  - gi_crystal.cr
   - modifier_type.cr
+ignore:
+  - gdk_event_ref
+  - gdk_event_unref
