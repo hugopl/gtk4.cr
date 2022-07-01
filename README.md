@@ -25,7 +25,7 @@ The documentation will be found at `docs/index.html`.
 You need the GTK libraries and their GObjectIntrospection files.
 
 - Archlinux: `pacman -S gtk4 gobject-introspection`
-- Ubuntu: `apt-get install libgtk-4-0 gobject-introspection gir1.2-gtk-4.0`
+- Ubuntu: `apt-get install libgtk-4-1 gobject-introspection gir1.2-gtk-4.0`
 - macOS: `brew install gobject-introspection gtk4`
 
 Be welcome to create a PR updating this readme once you know what packages are needed by your distro to run the
