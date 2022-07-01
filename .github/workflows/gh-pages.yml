@@ -4,6 +4,9 @@ on:
   push:
     branches: [ master ]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -14,4 +17,9 @@ jobs:
         run: sudo apt-get install libgtk-4-1 gobject-introspection gir1.2-gtk-4.0 libgirepository1.0-dev
       - name: Build documentation
         run: make doc
-
+      - name: Deploy documentation to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          destination_dir: ./docs
