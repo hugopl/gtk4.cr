@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `Gtk::Stack#has_child?(Gtk::Widget)`.
 - Added _source_dir_ parameter to `register_resource`, thanks @GeopJr.
 - Added `Pango::Layout#set_text(String)`, `Pango::Layout#set_text(Bytes)` and `Pango::Layout#set_text(Bytes, Int32)`.
-- API documentation is not auto-updated, thanks @1player.
+- API documentation is now auto-updated, thanks @1player.
 
 ## [0.10.0] - 2022-06-04
 ### Changed
