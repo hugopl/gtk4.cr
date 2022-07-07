@@ -13,6 +13,7 @@ include:
   - tree_view.cr
   - widget.cr
   - widget_template.cr
+  - snapshot.cr
 
 ignore:
  - ButtonPrivate
