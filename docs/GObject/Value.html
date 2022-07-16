@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.3.2">
+<meta name="generator" content="Crystal Docs 1.4.1">
 <meta name="crystal_docs.project_version" content="0.11.1">
 <meta name="crystal_docs.project_name" content="GTK4.cr">
 
@@ -5678,6 +5678,11 @@
   
   <li class=" " data-id="GTK4.cr/GObject/ParamSpecPool" data-name="gobject::paramspecpool">
       <a href="../GObject/ParamSpecPool.html">ParamSpecPool</a>
+      
+    </li>
+  
+  <li class=" " data-id="GTK4.cr/GObject/Property" data-name="gobject::property">
+      <a href="../GObject/Property.html">Property</a>
       
     </li>
   
@@ -11888,7 +11893,7 @@
   </h2>
   
     
-      <a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L2" target="_blank">
+      <a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L2" target="_blank">
         lib/gi-crystal/src/bindings/g_object/value.cr
       </a>
     
@@ -11941,6 +11946,11 @@
         <a href="#g_type_for%28value%29-class-method" class="signature"><strong>.g_type_for</strong>(value)</a>
         
           <div class="summary"><p>Returns the GType for the Crystal variable, if the value can be wrap in a <code><a href="../GObject/Value.html">Value</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#raw%28g_type%3AUInt64%2Cptr%3APointer%28Void%29%29-class-method" class="signature"><strong>.raw</strong>(g_type : UInt64, ptr : Pointer(Void))</a>
         
       </li>
     
@@ -12203,7 +12213,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12224,7 +12234,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12257,7 +12267,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L59" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="raw(g_type:UInt64,ptr:Pointer(Void))-class-method">
+      <div class="signature">
+        
+        def self.<strong>raw</strong>(g_type : <a href="../UInt64.html">UInt64</a>, ptr : Pointer(Void))
+
+        <a class="method-permalink" href="#raw%28g_type%3AUInt64%2Cptr%3APointer%28Void%29%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L95" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12290,7 +12316,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L132" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L154" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12306,7 +12332,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12322,7 +12348,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12338,7 +12364,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12354,7 +12380,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12370,7 +12396,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12386,7 +12412,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12402,7 +12428,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12418,7 +12444,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12434,7 +12460,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12450,7 +12476,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12466,7 +12492,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12482,7 +12508,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12498,7 +12524,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12514,7 +12540,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12530,7 +12556,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12546,7 +12572,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12562,7 +12588,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12578,7 +12604,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12594,7 +12620,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12610,7 +12636,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12626,7 +12652,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12642,7 +12668,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12658,7 +12684,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12674,7 +12700,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12690,7 +12716,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12706,7 +12732,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12722,7 +12748,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12738,7 +12764,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12754,7 +12780,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12770,7 +12796,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12786,7 +12812,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12802,7 +12828,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12818,7 +12844,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L72" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L86" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12839,7 +12865,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L91" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12855,7 +12881,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L119" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -12871,7 +12897,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/hugopl/gtk4.cr/blob/1ddcb4c78b2a1c24dcaf4e9e6997d52e3985f447/lib/gi-crystal/src/bindings/g_object/value.cr#L136" target="_blank">View source</a>]
+          [<a href="https://github.com/hugopl/gtk4.cr/blob/027e5196e896ebf55aa4b469c05ac874ea29c136/lib/gi-crystal/src/bindings/g_object/value.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
