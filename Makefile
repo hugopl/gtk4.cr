@@ -3,7 +3,7 @@ VERSION := $(shell shards version)
 
 doc: bin/gi-crystal
 	@echo "Generating documentation for Gtk4.cr version $(VERSION)..."
-	./bin/gi-crystal
+	./bin/gi-crystal --doc
 	# We remove the current docs so we can see if some file was removed from the docs
 	# on gh-pages branch that have the docs files checked in.
 	rm -rf docs

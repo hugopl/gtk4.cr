@@ -1,8 +1,11 @@
 namespace: Gsk
 version: "4.0"
-include:
-  - gi_crystal.cr
-  - render_node.cr
-ignore:
-  - gsk_render_node_ref
-  - gsk_render_node_unref
+require_after:
+- gi_crystal.cr
+- render_node.cr
+
+types:
+  RenderNode:
+    ignore_methods:
+    - ref
+    - unref

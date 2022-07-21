@@ -1,4 +1,4 @@
 namespace: Pango
 version: "1.0"
-include:
-  - layout.cr
+require_after:
+- layout.cr
