@@ -1,4 +1,12 @@
 namespace: Pango
 version: "1.0"
 require_after:
+- font_metrics.cr
 - layout.cr
+
+types:
+  FontMetrics:
+    binding_strategy: heap_wrapper_struct
+    ignore_methods:
+    - ref
+    - unref
