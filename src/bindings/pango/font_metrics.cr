@@ -8,6 +8,9 @@ module Pango
     end
 
     def finalize
+      {% if flag?(:debugmemory) %}
+        LibC.printf("~%s at %p - ref count: %d\n", self.class.name.to_unsafe, self, ref_count)
+      {% end %}
       LibPango.pango_font_metrics_unref(to_unsafe)
     end
   end
