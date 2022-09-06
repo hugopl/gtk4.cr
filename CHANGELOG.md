@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.12.0] - 2022-09-06
+### Added
+- Added overload `Gtk::Snapshot#translate(x : Float32, y : Float32)`.
+- Added overload `Gtk::Snapshot#append_color(color : Gdk::RGBA, x : Float32, y : Float32, width : Float32, height : Float32)`.
+- Added overload `Gtk::Snapshot#push_repeat(bounds_x : Float32, bounds_y : Float32, bounds_width : Float32, bounds_height : Float32, child_bounds_x : Float32, child_bounds_y : Float32, child_bounds_width : Float32, child_bounds_height : Float32)`
+- Added overload `Gtk::Snapshot#save` that receives a block and calls `Gtk::Snapshot#restore` at the end.
+
+### Fixed
+- Don't crash when instantiating `Pango::FontMetrics`.
+- Make possible to use `Pango::AttrList` and `Pango::Attributes`.
+
+### Changed
+- Using GI-Crystal v0.14.x, See [GI-Crystal changelog](https://github.com/hugopl/gi-crystal/blob/master/CHANGELOG.md) for more info.
+
 ## [0.11.1] - 2022-07-04
 ### Fixed
 - Fix compilation with HarfBuzz 4.4.1.
