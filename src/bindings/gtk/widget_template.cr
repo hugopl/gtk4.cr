@@ -48,8 +48,8 @@ module Gtk
       end
 
       def self._instance_init(instance : Pointer(LibGObject::TypeInstance), type : Pointer(LibGObject::TypeClass)) : Nil
-        LibGtk.gtk_widget_init_template(instance)
         previous_def
+        LibGtk.gtk_widget_init_template(instance)
       end
     end
   end
