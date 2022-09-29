@@ -1,6 +1,6 @@
 require "./spec_helper"
 
-@[Gtk::UiTemplate(file: "#{__DIR__}/bad_widget.ui", children: %w())]
+@[Gtk::UiTemplate(file: "#{__DIR__}/bad_widget.ui")]
 class BadWidget < Gtk::Widget
   include Gtk::WidgetTemplate
 

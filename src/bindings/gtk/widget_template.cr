@@ -42,8 +42,10 @@ module Gtk
         gbytes = LibGLib.g_bytes_new_static(data, data.bytesize)
         LibGtk.gtk_widget_class_set_template(klass, gbytes)
 
-        {% for child in @type.annotation(Gtk::UiTemplate)[:children] %}
-          LibGtk.gtk_widget_class_bind_template_child_full(klass, {{ child }}, 0, 0_i64)
+        {% if @type.annotation(Gtk::UiTemplate)[:children] %}
+          {% for child in @type.annotation(Gtk::UiTemplate)[:children] %}
+            LibGtk.gtk_widget_class_bind_template_child_full(klass, {{ child }}, 0, 0_i64)
+          {% end %}
         {% end %}
       end
 
