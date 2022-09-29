@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  test:
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - {os: ubuntu-22.04}
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Crystal
+        uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: ${{ matrix.crystal }}
+      - name: Install dependencies
+        run: sudo apt-get install libgtk-4-dev gobject-introspection gir1.2-gtk-4.0 libgirepository1.0-dev
+      - name: Install crystal dependencies
+        run: shards install
+      - name: Linter
+        run: crystal tool format --check
+      - name: Generate bindings
+        run: ./bin/gi-crystal
+      - name: Run tests
+        uses: GabrielBB/xvfb-action@v1
+        with:
+          run: crystal spec -v

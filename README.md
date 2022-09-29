@@ -1,3 +1,5 @@
+![Build Status](https://github.com/hugopl/gtk4.cr/actions/workflows/ci.yml/badge.svg?branch=master)
+
 # GTK4 Crystal Bindings
 
 See [examples](https://github.com/hugopl/gtk4.cr/tree/master/examples) folder and have fun.
