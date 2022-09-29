@@ -3,6 +3,8 @@ lib LibGLib
 end
 
 module Gtk
+  # This annotation tells GTK how to load UI files and what widgets should expose to the class,
+  # see `WidgetTemplate` for more information.
   annotation UiTemplate
   end
 
@@ -26,6 +28,8 @@ module Gtk
   #
   # exit(app.run)
   # ```
+  #
+  # You can also load the UI file from a resource by using `resource` instead of `file` on `Gtk::UiTemplate` parameter.
   module WidgetTemplate
     macro included
       def self._class_init(klass : Pointer(LibGObject::TypeClass), user_data : Pointer(Void)) : Nil
@@ -34,16 +38,23 @@ module Gtk
         {% unless @type.annotation(Gtk::UiTemplate) %}
         {% raise "You must annotate #{@type} with Gtk::UiTemplate." %}
         {% end %}
-        {% if flag?(:release) %}
-        data = {{ read_file(@type.annotation(Gtk::UiTemplate)[:file]) }}
-        {% else %}
-        data = File.read({{ @type.annotation(Gtk::UiTemplate)[:file] }})
-        {% end %}
-        gbytes = LibGLib.g_bytes_new_static(data, data.bytesize)
-        LibGtk.gtk_widget_class_set_template(klass, gbytes)
 
-        {% if @type.annotation(Gtk::UiTemplate)[:children] %}
-          {% for child in @type.annotation(Gtk::UiTemplate)[:children] %}
+        {% ui = @type.annotation(Gtk::UiTemplate) %}
+
+        {% if ui[:file] %}
+          {% if flag?(:release) %}
+          data = {{ read_file(ui[:file]) }}
+          {% else %}
+          data = File.read({{ ui[:file] }})
+          {% end %}
+          gbytes = LibGLib.g_bytes_new_static(data, data.bytesize)
+          LibGtk.gtk_widget_class_set_template(klass, gbytes)
+        {% elsif ui[:resource] %}
+          LibGtk.gtk_widget_class_set_template_from_resource(klass, {{ ui[:resource] }})
+        {% end %}
+
+        {% if ui[:children] %}
+          {% for child in ui[:children] %}
             LibGtk.gtk_widget_class_bind_template_child_full(klass, {{ child }}, 0, 0_i64)
           {% end %}
         {% end %}

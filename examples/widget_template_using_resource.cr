@@ -1,16 +1,9 @@
 require "gtk4"
 
-# To use widget templates you need:
+# For more info about how to use Widget Templates see `widget_tempalte.cr` example.
 #
-# - include `Gtk::WidgetTemplate` mixin.
-# - Annotate your class with `Gtk::UiTemplate`.
-#
-# The supported template parameters are:
-#
-# file: Absolute path to the UI file, i.e. the XML.
-# resource: Path to resource file, see `widget_template_using_resource.cr` for an example
-# children: Array with list of widget ids inside the XML that you want to access from Crystal code.
-@[Gtk::UiTemplate(file: "#{__DIR__}/widget_template.ui", children: %w(label))]
+# This example shows how to use an UI file from a GResource.
+@[Gtk::UiTemplate(resource: "/example/widget_template.ui", children: %w(label))]
 class ExampleAppWindow < Gtk::ApplicationWindow
   include Gtk::WidgetTemplate
 
@@ -23,9 +16,13 @@ class ExampleAppWindow < Gtk::ApplicationWindow
     # To access the internal template widgets declared in the `Gtk::UiTemplate` annotation you must
     # call `template_child` method and cast it to the proper type.
     @label = Gtk::Label.cast(template_child("label"))
-    @label.text = "Hey! I was a Gtk::Label in the UI file and now in Crystal land!"
+    @label.text = "Hey! I was a Gtk::Label in the UI file inside a GResource and now in Crystal land!"
   end
 end
+
+# Most important, we need to load the resource!!
+# For more info on this see `resource.cr` example.
+resource = Gio.register_resource("resource.xml")
 
 app = Gtk::Application.new("hello.example.com", Gio::ApplicationFlags::None)
 app.activate_signal.connect do
