@@ -1,5 +1,8 @@
 require "gtk4"
 
+# This is the simpler hello world version, using signal connections, for an example subclassing
+# Gtk::Application see hello_app.cr
+
 app = Gtk::Application.new("hello.example.com", Gio::ApplicationFlags::None)
 count = 0
 
