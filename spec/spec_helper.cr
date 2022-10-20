@@ -12,6 +12,7 @@ end
 
 private class WarnSupressor
   class_property? supress = false
+
   def self.supress
     @@supress = true
     yield
