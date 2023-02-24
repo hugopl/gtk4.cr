@@ -1,4 +1,4 @@
-require "gtk4"
+require "../src/gtk4"
 
 def activate(app : Gtk::Application)
   dialog = Gtk::FileChooserDialog.new(application: app, title: "Choose a file", action: :open)

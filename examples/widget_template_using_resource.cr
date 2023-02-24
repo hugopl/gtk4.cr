@@ -1,4 +1,4 @@
-require "gtk4"
+require "../src/gtk4"
 
 # For more info about how to use Widget Templates see `widget_tempalte.cr` example.
 #
@@ -22,7 +22,7 @@ end
 
 # Most important, we need to load the resource!!
 # For more info on this see `resource.cr` example.
-resource = Gio.register_resource("resource.xml")
+resource = Gio.register_resource("./examples/resource.xml", source_dir: "examples")
 
 app = Gtk::Application.new("hello.example.com", Gio::ApplicationFlags::None)
 app.activate_signal.connect do

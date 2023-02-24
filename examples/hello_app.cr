@@ -1,4 +1,4 @@
-require "gtk4"
+require "../src/gtk4"
 
 # For a simpler hello example, see hello_world.cr
 
