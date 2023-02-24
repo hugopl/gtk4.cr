@@ -10,3 +10,5 @@ shard.override.yml
 # Libraries don't need dependency lock
 # Dependencies will be locked in applications that use them
 /shard.lock
+# I use this file in SHARDS_OVERRIDE env var when I need to test gi-crystal changes.
+/local_shards.yml

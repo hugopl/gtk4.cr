@@ -1,4 +1,4 @@
-require "gtk4"
+require "../src/gtk4"
 
 # To use widget templates you need:
 #

@@ -1,4 +1,4 @@
-require "gtk4"
+require "../src/gtk4"
 
 UI = <<-EOT
 <?xml version="1.0" encoding="UTF-8"?>

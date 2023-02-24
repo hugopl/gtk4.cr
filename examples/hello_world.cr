@@ -1,4 +1,4 @@
-require "gtk4"
+require "../src/gtk4"
 
 # This is the simpler hello world version, using signal connections, for an example subclassing
 # Gtk::Application see hello_app.cr
