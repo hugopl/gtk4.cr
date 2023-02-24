@@ -5,6 +5,7 @@ version: "0.0"
 # declared as a pointer, so meanwhile the lazzy fix is to just ignore them until someone really need to use
 # these functions.
 lib_ignore:
+  - hb_face_collect_nominal_glyph_mapping
   - hb_ft_face_create
   - hb_ft_face_create_cached
   - hb_ft_face_create_referenced
