@@ -8,8 +8,8 @@ dependencies:
   gi-crystal:
     github: hugopl/gi-crystal
     version: ">= 0.15.0"
-  harfbuzz:
-    github: hugopl/harfbuzz.cr
+  pango:
+    github: hugopl/pango.cr
     version: ">= 0.1.0"
 
 crystal: ">= 1.4.1"
