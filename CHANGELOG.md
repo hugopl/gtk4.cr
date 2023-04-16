@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.13.0] - 2023-04-16
+### Added
+- Add `Gtk::Widget#children` helper method, thanks @hugopl.
+
+### Fixed
+- Fix crash related to order of initialization of widget templates, thanks @BlobCodes (#34)
+- Let gh-pages branch be orphan, so the repository doesn't store a ton of useless history for API docs, thanks @GeopJr (#38).
+- Update Ubuntu install instructions, thanks @aramvisser (#45).
+- Do not always require children parameter on Gtk::UiTemplate annotation, thanks @hugopl (#33).
+- Add support for UI templates from resource files, thanks @hugopl (#36).
+- Fix compilation with Harfbuzz 0.7, thanks @hugopl (#43)
+
+### Changed
+- Harfbuzz, Gio and Pango bindings were moved to different shards, GTK4 shard now depend on them, thanks @hugopl (#46).
+
 ## [0.12.0] - 2022-09-06
 ### Added
 - Added overload `Gtk::Snapshot#translate(x : Float32, y : Float32)`.
