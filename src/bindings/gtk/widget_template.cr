@@ -1,7 +1,3 @@
-lib LibGLib
-  fun g_bytes_new_static(data : Void*, size : LibC::SizeT) : Void*
-end
-
 module Gtk
   # This annotation tells GTK how to load UI files and what widgets should expose to the class,
   # see `WidgetTemplate` for more information.
