@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.14.0] - 2023-06-16
+### Added
+- Added simple particles engine example using GSK API (#51).
+- Added `Gdk::Display.default!`, same as `Gdk::Display.default.not_nil!` (#53).
+
+### Fixed
+- Do not try to unref destroyed windows at `finalize` (#52).
+
+### Changed
+- Using GI-Crystal v0.16.x, See [GI-Crystal changelog](https://github.com/hugopl/gi-crystal/blob/master/CHANGELOG.md) for more info.
+
 ## [0.13.0] - 2023-04-16
 ### Added
 - Add `Gtk::Widget#children` helper method, thanks @hugopl.

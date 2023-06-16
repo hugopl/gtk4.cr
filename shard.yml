@@ -1,5 +1,5 @@
 name: gtk4
-version: 0.13.0
+version: 0.14.0
 
 authors:
   - Hugo Parente Lima <hugo.pl@gmail.com>
@@ -7,7 +7,7 @@ authors:
 dependencies:
   gi-crystal:
     github: hugopl/gi-crystal
-    version: ">= 0.15.2"
+    version: ">= 0.16.0"
   pango:
     github: hugopl/pango.cr
     version: ">= 0.2.0"
