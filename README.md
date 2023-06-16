@@ -1,4 +1,4 @@
-![Build Status](https://github.com/hugopl/gtk4.cr/actions/workflows/ci.yml/badge.svg?branch=master)
+![Build Status](https://github.com/hugopl/gtk4.cr/actions/workflows/ci.yml/badge.svg?branch=main)
 
 # GTK4 Crystal Bindings
 
