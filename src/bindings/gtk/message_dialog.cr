@@ -6,6 +6,7 @@ module Gtk
                   text : ::String? = nil,
                   secondary_text : ::String? = nil, secondary_use_markup : Bool? = nil,
                   use_markup : Bool? = nil, transient_for : Window? = nil,
+                  modal : Bool = true,
                   &block : Proc(Int32, Nil)) : Nil
         dlg = MessageDialog.new(message_type: message_type,
           buttons: :{{ type.id }},
@@ -13,6 +14,7 @@ module Gtk
           text: text,
           secondary_text: secondary_text, secondary_use_markup: secondary_use_markup,
           use_markup: use_markup,
+          modal: modal,
           transient_for: transient_for)
         dlg.response_signal.connect do |response|
           block.call(response)
