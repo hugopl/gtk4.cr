@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.15.0] - 2023-07-16
+### Added
+- Add an example for `Gtk::SearchBar`.
+
+### Fixed
+- Add missing modal attribute to Gtk::MessageDialog sugar methods.
+
+### Changed
+- Using GI-Crystal v0.17.x, See [GI-Crystal changelog](https://github.com/hugopl/gi-crystal/blob/master/CHANGELOG.md) for more info.
+
 ## [0.14.0] - 2023-06-16
 ### Added
 - Added simple particles engine example using GSK API (#51).
