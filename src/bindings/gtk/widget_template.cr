@@ -6,7 +6,7 @@ module Gtk
 
   # Module used to implement widgets using XML templates.
   #
-  # The example bellow creates a window with the widgets defined by the
+  # The example below creates a window with the widgets defined by the
   # XML file _widget_template.ui_
   #
   # ```Crystal
