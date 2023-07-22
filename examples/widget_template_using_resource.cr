@@ -1,6 +1,6 @@
 require "../src/gtk4"
 
-# For more info about how to use Widget Templates see `widget_tempalte.cr` example.
+# For more info about how to use Widget Templates see `widget_template.cr` example.
 #
 # This example shows how to use an UI file from a GResource.
 @[Gtk::UiTemplate(resource: "/example/widget_template.ui", children: %w(label))]

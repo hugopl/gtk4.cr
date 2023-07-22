@@ -10,19 +10,19 @@ def abort(message)
   raise AbortCalled.new("ABORT: #{message}")
 end
 
-private class WarnSupressor
-  class_property? supress = false
+private class WarnSuppressor
+  class_property? suppress = false
 
-  def self.supress
-    @@supress = true
+  def self.suppress
+    @@suppress = true
     yield
   ensure
-    @@supress = false
+    @@suppress = false
   end
 end
 
 private def do_nothing_log_handler(a : Int32, b : Pointer(LibGLib::LogField), c : UInt64, d : Pointer(Void)) : UInt32
-  if WarnSupressor.supress?
+  if WarnSuppressor.suppress?
     GLib::LogWriterOutput::Handled.value
   else
     LibGLib.g_log_writer_default(a, b, c, d)
@@ -32,8 +32,8 @@ end
 LibGtk.gtk_init
 LibGLib.g_log_set_writer_func(->do_nothing_log_handler(Int32, Pointer(LibGLib::LogField), UInt64, Pointer(Void)).pointer, nil, nil)
 
-def supress_warnings
-  WarnSupressor.supress do
+def suppress_warnings
+  WarnSuppressor.suppress do
     yield
   end
 end
