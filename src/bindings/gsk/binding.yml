@@ -9,3 +9,6 @@ types:
     ignore_methods:
     - ref
     - unref
+  PathPoint:
+    ignore_methods:
+    - get_curvature
