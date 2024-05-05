@@ -60,7 +60,7 @@ project page, it's the binding generator used to create this binding.
 
 - [Collision](https://github.com/GeopJr/Collision) - A GUI tool to generate, compare and verify MD5, SHA-1, SHA-256 & SHA-512 hashes.
 - [RTFM](https://github.com/hugopl/rtfm) - Gnome dash docset documentation reader.
-- [Tijolo](https://github.com/hugopl/tijolo) - Simple and fast keyboard focused IDE (version using these bindings not yet released). 
+- [Tijolo](https://github.com/hugopl/tijolo) - Simple, fast and incomplete keyboard focused IDE.
 
 ## Contributing
 
