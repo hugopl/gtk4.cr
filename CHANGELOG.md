@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.17.0] - 2024-07-11
+### Added
+- Functions receiving `Gio::AsyncResultCallback` not works, unless the `_finish` functions isn't too complex, see `examples/file_dialog.cr`.
+
+### Changed
+- Using GI-Crystal v0.23.x, See [GI-Crystal changelog](https://github.com/hugopl/gi-crystal/blob/master/CHANGELOG.md) for more info.
+- Minimal crystal compiler version bumper to 1.6.0.
+
 ## [0.16.1] - 2024-03-24
 ### Fixed
 - Workaround to fix compilation with GTK 4.14. This remove Gtk::PathPoint#get_curvature
