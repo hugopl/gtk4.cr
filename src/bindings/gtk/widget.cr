@@ -30,6 +30,11 @@ module Gtk
       GObject::Object.new(ptr, GICrystal::Transfer::None)
     end
 
+    # :ditto:
+    def size_allocate(x : Int32, y : Int32, width : Int32, height : Int32, baseline : Int32)
+      size_allocate(Gdk::Rectangle.new(x, y, width, height), baseline)
+    end
+
     # Returns an `Iterator` over widget children. Call `.to_a` on it if you need to allocate an
     # array with all children.
     #

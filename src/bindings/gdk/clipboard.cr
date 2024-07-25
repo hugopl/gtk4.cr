@@ -10,4 +10,3 @@ module Gdk
     end
   end
 end
-
