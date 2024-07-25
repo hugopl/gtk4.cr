@@ -1,6 +1,7 @@
 namespace: Gdk
 version: "4.0"
 require_after:
+- clipboard.cr
 - display.cr
 - event.cr
 - gi_crystal.cr
