@@ -1,26 +1,23 @@
 name: CI
 
 on:
-  push:
   pull_request:
+    branches: [main]
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '20 16 * * 6'
 
 jobs:
   test:
     strategy:
       fail-fast: true
-      matrix:
-        include:
-          - {os: ubuntu-latest, crystal: latest}
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v3
       - name: Install Crystal
         uses: crystal-lang/install-crystal@v1
         with:
-          crystal: ${{ matrix.crystal }}
-      - name: Install dependencies
+          crystal: latest
+      - name: Install package dependencies
         run: sudo apt-get update -y && sudo apt-get install libgtk-4-dev gobject-introspection gir1.2-gtk-4.0 libgirepository1.0-dev
       - name: Install crystal dependencies
         run: shards install
