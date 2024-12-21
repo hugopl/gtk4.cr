@@ -54,6 +54,12 @@ module Gtk
             LibGtk.gtk_widget_class_bind_template_child_full(klass, {{ child }}, 0, 0_i64)
           {% end %}
         {% end %}
+
+        {% if ui[:ensure_classes] %}
+          {% for child in ui[:ensure_classes] %}
+            LibGObject.g_type_ensure({{ child }}.g_type)
+          {% end %}
+        {% end %}
       end
 
       def self._instance_init(instance : Pointer(LibGObject::TypeInstance), type : Pointer(LibGObject::TypeClass)) : Nil
