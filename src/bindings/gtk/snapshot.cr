@@ -36,7 +36,7 @@ module Gtk
 
     # Same as `Gtk::Snapshot#save`, but receives a block and calls `Gtk::Snapshot#restore`
     # automatically
-    def save
+    def save(&)
       LibGtk.gtk_snapshot_save(to_unsafe)
       yield
     ensure
