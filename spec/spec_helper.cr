@@ -13,7 +13,7 @@ end
 private class WarnSuppressor
   class_property? suppress = false
 
-  def self.suppress
+  def self.suppress(&)
     @@suppress = true
     yield
   ensure
@@ -32,7 +32,7 @@ end
 LibGtk.gtk_init
 LibGLib.g_log_set_writer_func(->do_nothing_log_handler(Int32, Pointer(LibGLib::LogField), UInt64, Pointer(Void)).pointer, nil, nil)
 
-def suppress_warnings
+def suppress_warnings(&)
   WarnSuppressor.suppress do
     yield
   end
