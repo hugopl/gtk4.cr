@@ -1,5 +1,7 @@
 require "../src/gtk4"
 
+{% raise "This example requires GTK >= 4.10, found: #{Gtk::MAJOR_VERSION}.#{Gtk::MINOR_VERSION}" if Gtk::MINOR_VERSION < 10 %}
+
 def activate(app : Gtk::Application)
   dialog = Gtk::FileDialog.new
   dialog.open(nil, nil) do |obj, result|
