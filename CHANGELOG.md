@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.18.0] - 2025-09-05
+### Added
+- Add `Gdk::Clipboard#text=` (#71).
+- Add alias to `Gtk::Widget#allocate` using integers instead of a `Gdk::Rectangle` (#72).
+- Add class ensuring for `Gtk::WidgetTemplate`, thanks @GeopJr (#75).
+- Add README information on compile time dependencies on MSYS2, thanks @li210 (#78).
+- Add README information on compile time dependencies for Fedora, thanks @aramvisser (#79).
+- Refuse to compile example on old GTK with a better message (#82). 
+
+### Changed
+- Bump required gi-crystal version to >= 0.25.1 (#84).
+
 ## [0.17.0] - 2024-07-11
 ### Added
 - Functions receiving `Gio::AsyncResultCallback` now works, unless the `_finish` functions isn't too complex, see `examples/file_dialog.cr`.
