@@ -46,5 +46,73 @@ module Gtk
     def children : Iterator(Widget)
       WidgetChildrenIterator.new(self)
     end
+
+    # Note: Manual fixes until a proper solution is merged into the generator.
+    def measure(
+      orientation : Gtk::Orientation,
+      for_size : Int32,
+      minimum : Int32* = Pointer(Int32).null,
+      natural : Int32* = Pointer(Int32).null,
+      minimum_baseline : Int32* = Pointer(Int32).null,
+      natural_baseline : Int32* = Pointer(Int32).null,
+    ) : Nil
+      LibGtk.gtk_widget_measure(to_unsafe, orientation, for_size, minimum, natural, minimum_baseline, natural_baseline)
+    end
+
+    private macro _register_measure_vfunc(impl_method_name)
+      private def self._vfunc_measure(
+        %this : Pointer(Void),
+        lib_orientation : UInt32,
+        lib_for_size : Int32,
+        lib_minimum : Int32*,
+        lib_natural : Int32*,
+        lib_minimum_baseline : Int32*,
+        lib_natural_baseline : Int32*
+      ) : Void
+        orientation = Gtk::Orientation.new(lib_orientation)
+
+        %instance = LibGObject.g_object_get_qdata(%this, GICrystal::INSTANCE_QDATA_KEY)
+        raise GICrystal::ObjectCollectedError.new if %instance.null?
+
+        %instance.as(self).measure(
+          orientation,
+          lib_for_size,
+          lib_minimum,
+          lib_natural,
+          lib_minimum_baseline,
+          lib_natural_baseline
+        )
+      end
+
+      def self._class_init(type_struct : Pointer(LibGObject::TypeClass), user_data : Pointer(Void)) : Nil
+        vfunc_ptr = (type_struct.as(Pointer(Void)) + 232).as(Pointer(Pointer(Void)))
+        vfunc_ptr.value = (->_vfunc_measure(Pointer(Void), UInt32, Int32, Pointer(Int32), Pointer(Int32), Pointer(Int32), Pointer(Int32))).pointer
+        previous_def
+      end
+    end
+  end
+
+  class Sorter < GObject::Object
+    private macro _register_compare_vfunc(impl_method_name)
+      private def self._vfunc_compare(%this : Pointer(Void), lib_item1 :  Pointer(Void), lib_item2 :  Pointer(Void), ) : Int32
+
+        item1=GObject::Object.new(lib_item1, GICrystal::Transfer::None)
+        item2=GObject::Object.new(lib_item2, GICrystal::Transfer::None)
+
+
+        %instance = LibGObject.g_object_get_qdata(%this, GICrystal::INSTANCE_QDATA_KEY)
+        raise GICrystal::ObjectCollectedError.new if %instance.null?
+
+        %retval = %instance.as(self).{{ impl_method_name.id }}(item1, item2)
+
+        %retval.to_i32
+      end
+
+      def self._class_init(type_struct : Pointer(LibGObject::TypeClass), user_data : Pointer(Void)) : Nil
+        vfunc_ptr = (type_struct.as(Pointer(Void)) + 136).as(Pointer(Pointer(Void)))
+        vfunc_ptr.value = (->_vfunc_compare(Pointer(Void), Pointer(Void), Pointer(Void))).pointer
+        previous_def
+      end
+    end
   end
 end
